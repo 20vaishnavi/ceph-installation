@@ -1,0 +1,43 @@
+ceph_release_num: 15
+cluster: ceph
+
+# Inventory host group variables
+mon_group_name: mons
+osd_group_name: osds
+rgw_group_name: rgws
+mds_group_name: mdss
+nfs_group_name: nfss
+rbdmirror_group_name: rbdmirrors
+client_group_name: clients
+iscsi_gw_group_name: iscsigws
+mgr_group_name: mgrs
+rgwloadbalancer_group_name: rgwloadbalancers
+grafana_server_group_name: grafana-server
+
+# Firewalld / NTP
+configure_firewall: True
+ntp_service_enabled: true
+ntp_daemon_type: chronyd
+
+# Ceph packages
+ceph_origin: repository
+ceph_repository: community
+ceph_repository_type: cdn
+ceph_stable_release: octopus
+
+# Interface options
+monitor_interface: $interface
+radosgw_interface: $interface
+
+# DASHBOARD
+dashboard_enabled: True
+dashboard_protocol: http
+dashboard_admin_user: admin
+dashboard_admin_password: St0ngAdminp@ass
+
+grafana_admin_user: admin
+grafana_admin_password: St0ngAdminp@ass
+
+
+public_network: "$public_network"
+cluster_network: "$cluster_network"
