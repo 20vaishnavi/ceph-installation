@@ -26,9 +26,9 @@ echo Enter the hostname of first host
 read $host1
 echo Enter the hostname of second host
 read $host2
-cat /root/all.yml >> group_vars/all.yml
-cat /root/osds.yml >> roup_vars/osds.yml
-cat /root/hosts > hosts
+cat /root/ceph-installation/all.yml >> group_vars/all.yml
+cat /root/ceph-installation/osds.yml >> roup_vars/osds.yml
+cat /root/ceph-installation/hosts > hosts
 ansible-playbook -i hosts site.yml
 
 
