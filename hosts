@@ -7,28 +7,29 @@ ansible_become_user=root
 
 # Ceph Monitor Nodes
 [mons]
-$host1
-$host2
+ceph1
+ceph2
+
 # MDS Nodes
 [mdss]
-$host1
-$host2
+ceph1
+ceph2
 
 # RGW
 [rgws]
-$host1
-$host2
+ceph1
+ceph2
 
 # Manager Daemon Nodes
 [mgrs]
-$host1
-$host2
+ceph1
+ceph2
 
 # set OSD (Object Storage Daemon) Node
 [osds]
-$host1
-$host2
+ceph1
+ceph2
 
 # Grafana server
 [grafana-server]
-$host1
+ceph1
