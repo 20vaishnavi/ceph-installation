@@ -14,21 +14,6 @@ source ~/.bashrc
 cp group_vars/all.yml.sample  group_vars/all.yml
 cp group_vars/osds.yml.sample  group_vars/osds.yml
 cp site.yml.sample  site.yml
-echo What is moniter_interface(like ens0/ens33)?
-read $interface
-echo What is public network(like 192.168.0.0/16)?
-read $public_network
-echo What is cluster network(like 192.168.0.0/16)?
-read $cluster_network
-echo Enter your devices to be used(like /dev/sdb):
-read $device
-echo Enter the hostname of first host
-read $host1
-echo Enter the hostname of second host
-read $host2
-cat /root/ceph-installation/all.yml >> group_vars/all.yml
-cat /root/ceph-installation/osds.yml >> roup_vars/osds.yml
-cat /root/ceph-installation/hosts > hosts
 ansible-playbook -i hosts site.yml
 
 
