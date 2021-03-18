@@ -26,8 +26,8 @@ ceph_repository_type: cdn
 ceph_stable_release: octopus
 
 # Interface options
-monitor_interface: $interface
-radosgw_interface: $interface
+monitor_interface: eth0
+radosgw_interface: eth0
 
 # DASHBOARD
 dashboard_enabled: True
@@ -39,5 +39,5 @@ grafana_admin_user: admin
 grafana_admin_password: St0ngAdminp@ass
 
 
-public_network: "$public_network"
-cluster_network: "$cluster_network"
+public_network: "172.31.0.0/16"
+cluster_network: "172.31.0.0/16"
