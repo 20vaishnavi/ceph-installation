@@ -14,9 +14,6 @@ source ~/.bashrc
 cp group_vars/all.yml.sample  group_vars/all.yml
 cp group_vars/osds.yml.sample  group_vars/osds.yml
 cp site.yml.sample  site.yml
-cat /root/ceph-installation/all.yml >> group_vars/all.yml
-cat /root/ceph-installation/osds.yml >> group_vars/osds.yml
-cat /root/ceph-installation/hosts >> hosts
-ansible-playbook -i hosts site.yml
+
 
 
